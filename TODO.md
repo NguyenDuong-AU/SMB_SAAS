@@ -2,10 +2,11 @@
 
 ## Phase 0 – Foundations
 - [ ] **Setup core system architecture**
+  - [x] Base FastAPI service skeleton with tenant-aware dependency (`/api/v1/ping`).
   - [ ] Multi-tenant auth (OAuth2/OIDC, RBAC: Owner, Admin, Staff, Client).
-  - [ ] Tenant + user data model with row-level security.
+  - [ ] Tenant + user data model with row-level security. _(ORM models drafted; RLS policies pending)_
   - [ ] Event bus/queue (Redis/NATS) with `events` table sink.
-  - [ ] Base config schema (per-tenant JSON).
+  - [x] Base config schema (per-tenant JSON) via `pydantic-settings`.
   - [ ] Messaging adapters: Email (SMTP), SMS (Twilio), basic logging only for v1.
   - [ ] Payment integration (Stripe) for SaaS billing.
   - [ ] Observability: structured logs, OpenTelemetry traces, tenant-tagged.
@@ -89,6 +90,6 @@
 - [ ] **KPIs dashboard**
   - [ ] Aggregate per module (response times, conversion %, revenue revived).
 - [ ] **Docs**
-  - [ ] README for dev setup.
+  - [ ] README for dev setup. _(Initial version drafted in repo root)_
   - [ ] API reference (per-tenant endpoints).
   - [ ] Niche template packs (Trades, Health, Agencies, Retail).
